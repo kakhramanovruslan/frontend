@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Assignment_1</title>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1 class="header_text">Registration Form</h1>
+    </header>
+
+    <section class="section_form">
+        <form action="">
+            <div class="display_flex">
+                <label class="form_element left_element" for="username">Enter Name</label>
+                <div class="form_element right_element">
+                    <input type="text" id="username" placeholder="username">
+                </div>
+            </div>
+            <div class="display_flex">
+                <label class="form_element left_element" for="password">Enter Password</label>
+                <div class="form_element right_element">
+                    <input type="password" id="password" placeholder="password">
+                </div>
+            </div>
+            <div class="display_flex">
+                <label class="form_element left_element" for="address">Enter Address</label>
+                <div class="form_element right_element">
+                    <textarea name="address_textarea" id="address" placeholder="address"></textarea>
+                </div>
+            </div>
+            <div class="display_flex">
+                <label class="form_element left_element">Select Game</label>
+                <div class="form_element right_element">
+                    <input type="checkbox" id="hockey" value="Hockey">
+                    <label for="hockey">Hockey</label>
+                    <br>
+                    <input type="checkbox" id="football" value="Football">
+                    <label for="football">Football</label>
+                    <br>
+                    <input type="checkbox" id="badminton" value="Badminton">
+                    <label for="badminton">Badminton</label>
+                    <br>
+                    <input type="checkbox" id="cricket" value="Cricket">
+                    <label for="cricket">Cricket</label>
+                    <br>
+                    <input type="checkbox" id="voleyball" value="Volleyball">
+                    <label for="voleyball">Volleyball</label>
+                    <br>
+                </div>
+            </div>
+            <div class="display_flex">
+                <label class="form_element left_element" for="gender">Gender</label>
+                <div class="form_element right_element" id="gender">
+                    <input type="radio" value="Male">
+                    <Label>Male</Label>
+                    <input type="radio" value="Female">
+                    <Label>Female</Label>
+                </div>
+            </div>
+            <div class="display_flex">
+                <label class="form_element left_element" for="select_age">Select ur age</label>
+                <div class="form_element right_element">
+                    <select  name="ages" id="select_age" >
+                        <option value="select" selected>Select</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                    </select>
+                </div>
+            </div>
+            <div class="display_flex">
+                <label class="form_element left_element" for="photo">Select Photo</label>
+                <div class="form_element right_element">
+                    <input type="file" name="photo" id="photo">
+                </div>
+            </div>
+            <div class="form_element display_flex">
+                <input class="buttons" type="button" value="Click Me" id="">
+                <input class="buttons" type="reset" value="Сбросить">
+                <input class="buttons" type="submit" value="Submit Form">
+            </div>
+
+        </form>
+    </section>
+
+</div>
+</body>
+</html>
