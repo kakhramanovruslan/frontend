@@ -1,0 +1,403 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+ul,ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+a{
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+}
+
+body{
+    height: 100%;
+    background: linear-gradient(180deg, #0E141C 0%, #0A0F14 100%);
+    background-attachment: fixed;
+    color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Uindbase';
+    src: url('fonts/UF1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Usually';
+    src: url('fonts/Usually-font-Bold.otf') format('opentype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Rosario';
+    src: url('fonts/Rosario.ttf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.navbar_container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 105px;
+    font-family: 'Uindbase';
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar_list{
+    display: flex;
+}
+.navbar_container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar_list li {
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: center;
+}
+.header_logo{
+    max-width: 164px;
+    margin-top: -8px;
+}
+
+.navbar_picked_item{
+    color: rgba(209, 193, 43, 1);
+}
+
+@media screen and (min-width: 428px) and (max-width: 799px) {
+    body {
+        background: blue;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1599px) {
+    body {
+        background: green;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+    .main_container {
+        margin-left: 170px;
+        margin-right: 170px;
+        margin-top: 40px;
+    }
+    .current_season_text_container{
+        margin-bottom: 100px;
+        margin-top: 64px;
+    }
+    .actual_text_container{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .main_container {
+        margin-left: 176px;
+        margin-right: 176px;
+        margin-top: 43px;
+    }
+    .current_season_text_container{
+        margin-top: 286px;
+    }
+    .actual_text_container{
+        margin-bottom: 90px;
+    }
+
+}
+
+.catalog_btn{
+    display: flex;
+    border: 2px solid rgba(209, 193, 43, 1);
+    border-radius: 50px;
+    align-items: center;
+    background: linear-gradient(180deg, #0E141C 0%, #0A0F14 100%);
+    color: rgba(209, 193, 43, 1);
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+    max-width: 205px;
+    margin-top: 173px;
+}
+.catalog_text{
+    margin-left: 26.5px;
+    margin-right: 38.5px;
+    font-family: Rosario;
+}
+.catalog_btn img {
+    margin-left: 30px;
+}
+.main_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 135px;
+}
+.main_section_text_container{
+    display: flex;
+    width: 100%;
+    margin-top: 33px;
+    justify-content: center;
+    align-items: center;
+}
+.front_text{
+    z-index: 2;
+    text-align: center;
+    font-size: 130px;
+    line-height: 113px;
+    font-family: 'Usually';
+    font-weight: 700;
+}
+.back_text{
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(31, 37, 45, 1);
+    font-size: 170px;
+    line-height: 148px;
+    font-family: 'Usually';
+    font-weight: 700;
+}
+.main_section img{
+    max-width: 210px;
+}
+.main_section{
+    display: flex;
+    flex-direction: column;
+}
+.for_every_day_text{
+    margin-top: 40px;
+    font-size: 25px;
+    line-height: 25px;
+    font-family: 'Uindbase';
+}
+.catalog_container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.current_season_text_container{
+    display: flex;
+    align-items: center;
+}
+.front_season_text{
+    z-index: 2;
+    font-size: 100px;
+    line-height: 100px;
+    font-family: 'Uindbase';
+    font-weight: 400;
+    margin-top: 30px;
+}
+.back_season_text{
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
+    color: rgba(31, 37, 45, 1);
+    font-size: 140px;
+    line-height: 160px;
+    font-family: 'Usually';
+    font-weight: 700;
+}
+.photo_current_season{
+    margin: 58px auto 58px auto;
+}
+.catalog_season_container{
+    position: relative;
+    width: 1248px;
+    margin: 0 auto;
+}
+.catalog_season{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 100px;
+    bottom: 162px;
+}
+.catalog_container_text{
+    font-family: Uindbase;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+.catalog_season_btn img {
+    margin-left: 30px;
+}
+
+.actual_text_container{
+    position: relative;
+    font-family: 'Usually', sans-serif;
+}
+.catalog_season_btn{
+    display: flex;
+    border: 2px solid rgba(209, 193, 43, 1);
+    border-radius: 50px;
+    align-items: center;
+    background: transparent;
+    color: rgba(209, 193, 43, 1);
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+    max-width: 205px;
+    margin-top: 15px;
+}
+.actual_back_text{
+    position: absolute;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 160px;
+    font-weight: 700;
+    line-height: 160px;
+    text-align: right;
+    letter-spacing: 10px;
+
+}
+.actual_front_text{
+    position: relative;
+    font-family: 'Uindbase';
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100px;
+    text-align: right;
+    padding-top: 42px;
+}
+.actual_list_item *{
+    max-width: 272px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.actual_img{
+    width: 100%;
+    height: 373px;
+    object-fit: cover;
+}
+.actual_list{
+    width: 100%;
+    max-width: 1248px;
+    margin: 0 auto 80px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.actual_content{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.see_more_container{
+    max-width: 1248px;
+    text-align: end;
+    margin-left: 13%;
+    margin-bottom: 50px;
+}
+.footer{
+    margin-bottom: 64px;
+    margin-top: 50px;
+}
+.footer_container{
+    max-width: 1602px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_container * {
+    font-family: 'Rosario';
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18.18px;
+}
+.footer_logo_content img{
+    margin-bottom: 10px;
+}
+.footer_content {
+    padding: 0 18px 0 38px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact_list{
+    display: flex;
+    justify-content: space-between;
+}
+.contacts_text_container{
+    position: relative;
+    font-family: 'Usually';
+}
+.contacts_back_text{
+    position: absolute;
+    top: 0;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 180px;
+    font-weight: 700;
+    line-height: 160px;
+
+}
+.contacts_front_text{
+    position: relative;
+    font-family: 'Uindbase';
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100px;
+    text-align: left;
+    padding-top: 30px;
+}
+.contacts_content_container{
+    display: flex;
+    margin-top: 55px;
+    align-items: center;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    font-family: Uindbase;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    margin-left: 126px;
+}
