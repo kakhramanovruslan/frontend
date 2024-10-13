@@ -193,7 +193,6 @@ p {
     text-align: justify;
 }
 
-
 .contact-section {
     background: rgba(255, 202, 40, 0.1);
     border-radius: 10px;
@@ -250,6 +249,58 @@ button:hover {
     background-color: #FF3D00;
 }
 
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text-content {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.text-content h1 {
+    color: #ffcc00;
+    font-size: 36px;
+}
+
+.text-content p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.profile-image {
+    flex: 0 0 300px;
+}
+
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 28px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -259,6 +310,20 @@ button:hover {
         top: 70px;
         left: 0;
         padding: 20px 0;
+    }
+
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-image {
+        flex: 0 0 auto;
     }
 
     .nav-menu.active {
