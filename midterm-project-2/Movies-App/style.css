@@ -83,6 +83,7 @@ h1 {
     gap: 8px;
     justify-content: space-around;
     margin: 20px auto;
+    flex-wrap: wrap;
 }
 
 .controls button {
@@ -92,6 +93,14 @@ h1 {
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex-grow: 1;
+    min-width: 120px;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        width: 80%;
+    }
 }
 
 .controls button:hover {
@@ -223,6 +232,8 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 60%;
+    width: 100%;
 }
 
 .movie-trailer iframe {
