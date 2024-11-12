@@ -70,7 +70,6 @@ function createRecipeCard(recipe) {
 }
 
 function openFullRecipe(recipeId) {
-    // Получаем полный рецепт по ID
     fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`)
         .then(response => response.json())
         .then(recipe => {
@@ -109,3 +108,47 @@ function displayFavorites() {
         recipeContainer.appendChild(card);
     });
 }
+
+
+searchQuery.addEventListener('input', getSuggestions);
+
+function getSuggestions() {
+    const query = searchQuery.value;
+    if (query.length < 2) {
+        suggestions.classList.add('hidden');
+        return;
+    }
+
+    fetch(`https://api.spoonacular.com/recipes/autocomplete?query=${query}&apiKey=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+            displaySuggestions(data);
+        });
+}
+
+function displaySuggestions(suggestionsData) {
+    const suggestions = document.getElementById('suggestions');
+    suggestions.innerHTML = '';
+    if (suggestionsData.length === 0) {
+        suggestions.classList.add('hidden');
+        return;
+    }
+
+    suggestionsData.forEach(item => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.classList.add('suggestion-item');
+        suggestionItem.innerText = item.title;
+        suggestionItem.addEventListener('click', () => {
+            searchQuery.value = item.title;
+            suggestions.classList.add('hidden');
+        });
+        suggestions.appendChild(suggestionItem);
+    });
+    suggestions.classList.remove('hidden');
+}
+
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.search-container')) {
+        document.getElementById('suggestions').classList.add('hidden');
+    }
+});
